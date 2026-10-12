@@ -3,13 +3,14 @@ import './Interface.css'
 import GradientButton from '../GradientButton/GradientButton'
 
 export default function () {
-    const [selected, setselected] = useState("/public/Photo3.png")
+    const base = import.meta.env.BASE_URL;
+    const [selected, setselected] = useState(`${base}Photo3.png`)
     const array = [ 
-        "/public/Photo1.png",
-        "/public/Photo2.png", 
-        "/public/Photo3.png", 
-        "/public/Photo4.png", 
-        "/public/Photo1.png",
+        `${base}Photo1.png`,
+        `${base}Photo2.png`, 
+        `${base}Photo3.png`, 
+        `${base}Photo4.png`, 
+        `${base}Photo1.png`,
     ]
     return (
         <div className='interface'>

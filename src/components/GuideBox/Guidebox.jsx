@@ -21,13 +21,13 @@ export default function Guidebox() {
                                 <div className="boll2 bolls circle"></div>
                                 <div className="boll3 bolls circle"></div>
                                 <div className="logo1 circle">
-                                    <img src="/public/Ellipse 9.png" alt="" />
+                                    <img src={`${import.meta.env.BASE_URL}Ellipse 9.png`} alt="" />
                                 </div>
                                 <div className="logo2 circle">
-                                    <img src="/public/Ellipse 11.png" alt="" />
+                                    <img src={`${import.meta.env.BASE_URL}Ellipse 11.png`} alt="" />
                                 </div>
                                 <div className="logo3 circle">
-                                    <img src="/public/Ellipse 10.png" alt="" />
+                                    <img src={`${import.meta.env.BASE_URL}Ellipse 10.png`} alt="" />
                                 </div>
                             </div>
                         </div>

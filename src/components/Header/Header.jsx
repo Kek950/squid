@@ -8,7 +8,7 @@ export default function Header() {
         
         <div className="background">
             <div className="background__img">
-                <img src="public/Group 95.png" alt="" />
+                <img src={`${import.meta.env.BASE_URL}Group 95.png`} alt="" />
             </div>
         </div>
 
@@ -26,11 +26,11 @@ export default function Header() {
         <div className="substractBlock">
 
           <div className="substract top">
-            <img src="public/Ellipse 18.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}Ellipse 18.png`} alt="" />
           </div>
           <div className="inner"></div>
           <div className="substract bottom">
-            <img src="public/Ellipse 18.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}Ellipse 18.png`} alt="" />
           </div>
 
         </div>
@@ -38,13 +38,13 @@ export default function Header() {
 
         <div className="bg_balls">
           <div className="ball_1 ball">
-            <img src="/public/Ellipse 14.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}Ellipse 14.png`} alt="" />
           </div>
           <div className="ball_2 ball">
-            <img src="/public/Ellipse 14.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}Ellipse 14.png`} alt="" />
           </div>
           <div className="ball_3 ball">
-            <img src="/public/Ellipse 14.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}Ellipse 14.png`} alt="" />
           </div>
         </div>
 

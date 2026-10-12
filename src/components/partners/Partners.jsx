@@ -89,7 +89,7 @@ export default function Partners() {
                         </button>
                     </div>
                     <div className="right">
-                        <img src="./public/Frame.png" alt="" />
+                        <img src={`${import.meta.env.BASE_URL}Frame.png`} alt="" />
                     </div>
                 </div>
             </div>
