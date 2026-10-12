@@ -1,0 +1,182 @@
+.header{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .background{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        opacity: 0.3;
+
+        img{
+            width: 100%;
+        }
+    }
+    
+    .header__title{
+        position: relative;
+        z-index: 3;
+        color: white;
+        margin-top: 104px;
+        margin-bottom: 60px;
+
+        h1{
+            font-size: clamp(48px, 5vw, 64px);
+            line-height: 80px;
+            display: block;
+            max-width: 750px;
+            margin: auto;
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 580px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 24px;
+        }
+        button{
+            margin: auto;
+        }
+    }
+
+    .substractBlock{
+        position: absolute;
+        width: 100%;
+        height: 474px;
+        top: 800px;
+        overflow: hidden;
+        z-index: 0;
+
+        
+        .inner{
+            width: 100%;
+            height: 100%;
+            background: rgb(255,152,152);
+            background: -moz-linear-gradient(128deg, rgba(255,152,152,1) 0%, rgba(128,84,255,1) 50%, rgba(255,152,152,1) 100%);
+            background: -webkit-linear-gradient(128deg, rgba(255,152,152,1) 0%, rgba(128,84,255,1) 50%, rgba(255,152,152,1) 100%);
+            background: linear-gradient(128deg, rgba(255,152,152,1) 0%, rgba(128,84,255,1) 50%, rgba(255,152,152,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9898",endColorstr="#ff9898",GradientType=1);
+            background-size: 200% 200%; 
+            animation: fade 10s infinite ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: li;
+            animation: fade 10s infinite ease-in-out;
+            opacity: 0;
+            } */
+
+
+        .substract{
+            width: 104%;
+            height: 205px;
+            position: absolute;
+            transform: translateX(-2%);
+            z-index: 2;
+
+            &.top{
+                top: -75px;
+            }
+
+            &.bottom{
+                bottom: -75px;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .bg_balls{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 300;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        z-index: 0;
+        .ball{
+            position: absolute;
+            z-index: 1;
+            img{
+                aspect-ratio: 1/1;
+
+            }
+            &.ball_1{
+                top: 400px;
+                left: 112px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &.ball_2{
+                width: 96px;
+                top: 303px;
+                right: 121px;
+                img{
+                    width: 96px;
+                }
+            }
+            &.ball_3{
+                /* top: 70px;
+                left: 856px; */
+                img{
+                    width: 96px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .header{
+        .header__title{
+            h1{
+                font-size: clamp(32px, 5vw, 64px);
+                line-height: 120%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+nav{
+    position: relative;
+    max-width: 1110px;
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 4;
+
+    .nav__logo{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__links{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        a{
+            color: white;
+            text-decoration: none;
+
+
+            &.nav_register{
+                position: relative;
+                border-radius: 5px;
+                padding: 12px 28px;
+                overflow: hidden;
+
+                background: var(--pink);
+                background: -moz-linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                background: -webkit-linear-gradient(128deg,var(--pink) 0%, var(--purple) 90%);
+                background: linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9898",endColorstr="#8054ff",GradientType=1);
+                transition: .3s all;
+
+
+                &:hover::before{
+                    opacity: 1;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--purple);
+                    opacity: 0;
+                    transition: .3s all;
+                }
+
+                &:hover::before{
+                    opacity: 1;
+                }
+
+                & > span{
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+        
+    }
+
+    .nav__burger{
+        cursor: pointer;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+
+        width: 48px;
+        height: 48px;
+        border: none;
+        background-color: transparent;
+
+        .line{
+            display: block;
+            width: 90%;
+            height: 4px;
+            background-color: white;
+            border-radius: 2px;
+            transition: .2s ease-in-out;
+        }
+
+        &.nav__burger_active{
+            .line{
+
+                &:nth-child(1){
+                    transform:  translateY(10px) rotate(45deg);
+                }
+
+                &:nth-child(2){
+                    opacity: 0;
+                }
+
+                &:nth-child(3){
+                    transform:  translateY(-10px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    nav{
+        
+        z-index: 8;
+
+        .nav__links{
+            position: absolute;
+            top: 64px;
+            right: 0;
+            width: clamp(200px, 75vw, 320px);
+            height: 0;
+            flex-direction: column;
+            background: var(--purple);
+            border-radius: 20px;
+            gap: 0;
+            overflow: hidden;
+            opacity: 0.3;
+            transition: .2s all;
+            z-index: 9;
+
+            &.active{
+                opacity: 1;
+                height: 438px;
+            }
+    
+            a{
+                display: block;
+                width: 100%;
+                padding:24px !important;
+
+                &:hover{
+                    background-color: white;
+                    color: var(--purple);
+                }
+
+                &.nav_register{
+                    border-radius: 0;
+                    background: var(--pink);
+    
+                    &:hover{
+                        
+                        &::before{
+                            background-color: white;
+                        }
+                        span{
+                            color: var(--purple);
+                        }
+                    }
+                }
+            }
+    
+        }
+        .nav__burger{
+            display: flex;
+        }
+    }
+}

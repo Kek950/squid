@@ -1,0 +1,254 @@
+.Guidebox {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        .leftside {
+            .circle {
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1/1;
+                /* border: 1px solid #fff; */
+            }
+
+            .Ellipse1 {
+                width: 670px;
+                border: 2px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .Ellipse2 {
+                width: 510px;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .Ellipse3 {
+                width: 380px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                animation: rotateR infinite linear 10s;
+                position: relative;
+            }
+
+            .Ellipse4 {
+                width: 260px;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+            }
+
+            .Ellipse5 {
+                width: 130px;
+                background-color: var(--bgGray);
+                animation: rotateL infinite linear 10s;
+            }
+
+            .logo1 {
+                position: absolute;
+                right: -20px;
+                top: 89px;
+                animation: rotateL infinite linear 10s;
+            }
+
+            .logo2 {
+                position: absolute;
+                left: -10px;
+                top: 60px;
+                animation: rotateL infinite linear 10s;
+            }
+
+            .logo3 {
+                position: absolute;
+                left: 95px;
+                bottom: -20px;
+                animation: rotateL infinite linear 10s;
+            }
+
+            .bolls {
+                width: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgb(255, 152, 152);
+                background: linear-gradient(142deg, rgba(255, 152, 152, 0.5032213569021359) 0%, rgba(128, 84, 255, 0.5) 100%);
+                position: absolute;
+
+                &::after {
+                    content: '';
+                    height: 19px;
+                    width: 19px;
+                    border-radius: 50%;
+                    background: var(--pink);
+                    background: -moz-linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                    background: -webkit-linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                    background: linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9898", endColorstr="#8054ff", GradientType=1);
+                }
+            }
+
+            .boll1 {
+                left: -10px;
+                animation: rotateL infinite linear 10s;
+                top: 224px;
+            }
+
+            .boll2 {
+                right: 50px;
+                bottom: 24px;
+                animation: rotateL infinite linear 10s;
+            }
+
+            .boll3 {
+                right: 115px;
+                top: -10px;
+                animation: rotateL infinite linear 10s;
+            }
+        }
+
+        .rightside {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+
+            &>* {
+                text-align: start;
+            }
+
+            h2 {
+                font-size: 48px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: #9E9E9E;
+            }
+
+            button {
+                cursor: pointer;
+                font-family: 'Poppins';
+                padding: 12px 25px;
+                color: white;
+                border-radius: 5px;
+                background: var(--pink);
+                background: -moz-linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                background: -webkit-linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                background: linear-gradient(128deg, var(--pink) 0%, var(--purple) 90%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9898", endColorstr="#8054ff", GradientType=1);
+                border: none;
+            }
+        }
+    }
+}
+
+@keyframes rotateR {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotateL {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: -360deg;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .Guidebox {
+        & .container {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+
+            * {
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            &>div {
+                &.spline {
+                    .wrapper {
+                        width: calc(100% + 400px) !important;
+                        transform: translateX(-220px) translateY(64px) rotate(8deg) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .contactus {
+        & .container {
+            grid-template-columns: 1fr !important;
+
+            &>div {
+                &.spline {
+                    position: absolute !important;
+                    opacity: 0.2;
+
+                    .wrapper {
+                        width: calc(100% + 400px) !important;
+                        transform: translateX(-220px) translateY(0px) rotate(8deg) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .Guidebox {
+        .container {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+
+            .leftside {
+                scale: 0.7;
+                transform: translateX(60px);
+
+                margin: 0 auto;
+
+                .Ellipse1 {
+                    width: 100%;
+                }
+            }
+
+            .rightside {
+                width: fit-content;
+                margin: 0 auto;
+                align-items: center;
+
+                h2 {
+                    width: 100%;
+                    max-width: 320px;
+                    font-size: 32px;
+                    padding: 0 5px 0 5px;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+
+                p {
+                    width: 100%;
+                    max-width: 320px;
+                    font-size: 16px;
+                    text-align: center;
+                    padding: 0 10px 0 10px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
